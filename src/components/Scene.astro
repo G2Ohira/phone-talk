@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import Photo01Image from "../assets/photo-01-image.webp";
+import Photo02Image from "../assets/photo-02-image.webp";
+import Photo03Image from "../assets/photo-03-image.webp";
+import SceneImages from "../assets/scene-images.webp";
+---
+
+<div class="mt-12 flex justify-center items-center flex-col">
+  <div class="title">Scene</div>
+  <div class="text-center mt-8 mb-4 w-[95%] tracking-wider">
+    <p class="text-xl text-dark-purple font-bold font-koburina">
+      “寄せ書きメッセージ、 <br class="block md:hidden" />みんな同じ文章になっていませんか？”
+    </p>
+    <p class="my-4 text-base md:text-lg !leading-[36px]">
+      PhoneTalkを使うことでより参加者の本音を<br class="block md:hidden" />引き出すことが出来ます。<br />
+      結婚式や卒業式をはじめ、<br class="block md:hidden" />さまざまなイベントで使い方はあなた次第！
+    </p>
+  </div>
+  <div class="flex justify-around items-start flex-col md:flex-row space-x-none md:space-x-12">
+    <Image
+      class="px-2 md:mx-auto"
+      src={SceneImages}
+      width={1050}
+      height={509}
+      alt="卒業式や結婚式、ベイビーシャワーに使えます"
+    />
+    <!-- <div class="card">
+      <Image
+          class="img"
+          src={Photo01Image}
+          width={618}
+          height={598}
+          alt="Special memories will always be here"
+      />
+      <div class="scene">
+        <div class="hr"></div>
+        <div class="scene-number">SCENE.1</div>
+        <div class="hr"></div>
+      </div>
+      <div class="mx-auto text-center">
+        <p class="text-lg leading-relaxed font-semibold">学校の卒業式で</p>
+        <div class="my-2 text-xl lg:text-2xl leading-relaxed font-semibold text-center">
+          <span>卒業生</span><span class="mx-2 text-dark-purple">▶</span><span>未来の自分たちへ</span>
+        </div>
+        <p class="text-lg leading-relaxed font-semibold">タイムカプセルとして</p>
+      </div>
+    </div>
+    <div class="card">
+      <Image
+          class="img"
+          src={Photo02Image}
+          width={618}
+          height={598}
+          alt="Special memories will always be here"
+      />
+      <div class="scene">
+        <div class="hr"></div>
+        <div class="scene-number">SCENE.2</div>
+        <div class="hr"></div>
+      </div>
+      <div class="mx-auto text-center">
+        <p class="text-lg leading-relaxed font-semibold">結婚式の会場で</p>
+        <div class="my-2 text-xl lg:text-2xl leading-relaxed font-semibold text-center">
+          <span>友人·家族</span><span class="mx-2 text-dark-purple">▶</span><span>新郎新婦へ</span>
+        </div>
+        <p class="text-lg leading-relaxed font-semibold">生メッセージ</p>
+      </div>
+    </div>
+    <div class="card">
+      <Image
+          class="img"
+          src={Photo03Image}
+          width={618}
+          height={598}
+          alt="Special memories will always be here"
+      />
+      <div class="scene">
+        <div class="hr"></div>
+        <div class="scene-number">SCENE.3</div>
+        <div class="hr"></div>
+      </div>
+      <div class="mx-auto text-center">
+        <p class="text-lg leading-relaxed font-semibold">ベイビーシャワーで</p>
+        <div class="my-2 text-xl lg:text-2xl leading-relaxed font-semibold text-center">
+          <span>参加者</span><span class="mx-2 text-dark-purple">▶</span><span>赤ちゃんに</span>
+        </div>
+        <p class="text-lg leading-relaxed font-semibold">生まれる前のプレゼント</p>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<style>
+  .title {
+    @apply text-dark-gray font-futurapt
+          text-5xl border-b-4 border-purple
+          border-dotted pb-8 w-96 max-w-[90%] text-center;
+    font-weight: 450;
+  }
+  .card {
+    @apply max-w-[90%] mx-auto flex justify-center items-center flex-col;
+    .img {
+      @apply w-full md:w-80 h-auto;
+    }
+    .scene {
+      @apply w-full flex justify-center items-center my-4;
+      .scene-number {
+        @apply text-gold text-3xl font-bold mx-3;
+      }
+      .hr {
+        @apply w-full border border-gold mx-2;
+      }
+    }
+  }
+</style>

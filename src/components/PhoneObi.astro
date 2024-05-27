@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import WaveImagePc from "../assets/wave-pc.webp";
+import PhoneImagePc from "../assets/phone-pc.webp";
+import WaveImageSp from "../assets/wave-sp.webp";
+import PhoneImageSp from "../assets/phone-sp.webp";
+---
+
+<div class="hidden md:block phone-bg pc" style=`background-image: url(${WaveImagePc.src})`>
+  <Image
+    class="m-auto w-auto max-h-[200px]"
+    src={PhoneImagePc}
+    width={2880}
+    height={398}
+    alt="Special memories will always be here"
+  />
+</div>
+<div class="block md:hidden phone-bg sp" style=`background-image: url(${WaveImageSp.src})`>
+  <Image
+    class="m-auto w-auto max-h-[200px]"
+    src={PhoneImageSp}
+    width={786}
+    height={216}
+    alt="Special memories will always be here"
+  />
+</div>
+
+<style>
+  .phone-bg {
+    @apply w-full;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    &.pc {
+      @apply my-20 py-20;
+      animation-duration: 200s;
+      animation-name: swipe-scroll-pc;
+    }
+    &.sp {
+      @apply my-10 py-10;
+      animation-duration: 120s;
+      animation-name: swipe-scroll-sp;
+    }
+  }
+  @keyframes swipe-scroll-pc {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 3000% 0;
+    }
+  }
+  @keyframes swipe-scroll-sp {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 2010% 0;
+    }
+  }
+</style>

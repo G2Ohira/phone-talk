@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import AboutImage from "../assets/about.webp";
+---
+
+<div class="hidden md:flex justify-around items-start flex-row w-full max-w-6xl mx-auto">
+  <div>
+    <h2 class="title">Voice Album Service</h2>
+    <h3 class="text-dark-purple font-futurapt font-semibold text-xl">その音声が宝物になる。未来に残る伝言サービス</h3>
+    <div class="my-4 font-koburina leading-relaxed tracking-wider">
+      <p class="mb-4">
+        Phone Talkは、2024年4月に設立された<br/>
+        日本初のボイスアルバムサービスです。
+      </p>
+      <p class="mb-4">
+        イベントで、来場者が受話器に向かってお話頂いた声を<br/>
+        小さいラジオに入れてプレゼントする伝言サービスです。
+      </p>
+      <p class="mb-4">
+        テキストでは伝わらない、その時の感情、間、声色を<br/>
+        そのままの純度でお届けします。
+      </p>
+      <!-- <div class="mt-14 flex justify-end">
+        <div class="cursor-pointer relative rounded-full text-dark-purple border-purple font-bold border-2 h-12 w-40 flex justify-center items-center">
+          詳しくみる
+          <div class="absolute top-1/2 right-2 -translate-y-1/2 text-sm">
+            〉
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <div>
+    <Image
+        class="w-[377px] h-[386px]"
+        src={AboutImage}
+        width={377}
+        height={386}
+        alt="Phone-Talkイメージ"
+    />
+  </div>
+</div>
+<div class="flex md:hidden justify-around items-start flex-col w-fit max-w-4xl mx-auto">
+  <div class="text-center">
+    <h2 class="title">Voice Album Service</h2>
+    <h3 class="text-dark-purple font-futurapt font-semibold text-lg my-2">その音声が宝物になる。未来に残る伝言サービス</h3>
+  </div>
+  <div class="my-5 mx-auto">
+    <Image
+        class="w-[190px] h-[190px]"
+        src={AboutImage}
+        width={377}
+        height={386}
+        alt="Phone-Talkイメージ"
+    />
+  </div>
+  <div class="w-96 mx-auto">
+    <div class="my-4 font-koburina leading-loose tracking-wider">
+      <p class="mb-4">
+        Phone Talkは、2024年4月に設立された<br/>
+        日本初のボイスアルバムサービスです。
+      </p>
+      <p class="mb-4">
+        イベントで、来場者が受話器に向かってお話頂いた声を小さいラジオに入れてプレゼントする伝言サービスです。
+      </p>
+      <p class="mb-4">
+        テキストでは伝わらない、その時の感情、間、声色をそのままの純度でお届けします。
+      </p>
+    </div>
+  </div>
+  <!-- <div class="mx-auto my-6">
+    <div class="cursor-pointer relative rounded-full text-dark-purple border-purple font-bold border-2 h-12 w-40 flex justify-center items-center">
+      詳しくみる
+      <div class="absolute top-1/2 right-2 -translate-y-1/2 text-sm">
+        〉
+      </div>
+    </div>
+  </div> -->
+</div>
+
+<style>
+  .title {
+    @apply text-[52px] font-futurapt text-dark-purple align-baseline leading-none;
+    font-weight: 450;
+  }
+</style>

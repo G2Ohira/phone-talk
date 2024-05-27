@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import PhoneType01Image from "../assets/phone-type-01.webp";
+import PhoneType02Image from "../assets/phone-type-02.webp";
+import PhoneType03Image from "../assets/phone-type-03.webp";
+---
+
+<div class="mt-12 flex justify-center items-center flex-col w-fit max-w-4xl mx-auto">
+  <div class="title">PhoneType</div>
+  <div class="flex justify-center flex-col lg:flex-row mt-8 mb-4 w-[95%]">
+    <Image
+      class="mx-auto"
+      src={PhoneType01Image}
+      width={320}
+      height={385}
+      alt="BasicType1 ベーシックタイプ"
+    />
+    <Image
+      class="mx-auto"
+      src={PhoneType02Image}
+      width={320}
+      height={385}
+      alt="BasicType2 レトロタイプ"
+    />
+    <Image
+      class="mx-auto"
+      src={PhoneType03Image}
+      width={320}
+      height={385}
+      alt="BasicType3 クラシックタイプ"
+    />
+  </div>
+</div>
+
+<style>
+  .title {
+    @apply text-dark-gray font-futurapt
+          text-5xl border-b-4 border-purple
+          border-dotted pb-8 w-96 max-w-[90%] text-center;
+    font-weight: 450;
+  }
+</style>

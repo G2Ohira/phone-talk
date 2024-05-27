@@ -1,0 +1,112 @@
+---
+import { Image } from "astro:assets";
+import PhoneSetImage from "../assets/phonetalk-set.webp";
+---
+
+<div class="mt-12 flex justify-center items-center flex-col w-fit max-w-4xl mx-auto">
+  <div class="title">Flow</div>
+  <div class="text-center lg:text-left pl-0 lg:pl-2 my-2 w-[96%] tracking-wider">
+    <p class="pl-0 lg:pl-4 text-base lg:text-lg !leading-[36px] text-dark-purple font-bold">
+      ご注文から納品まで
+    </p>
+  </div>
+  <div class="table">
+    <div class="box-area">
+      <div class="step-area">
+        <div class="step">STEP</div>
+        <div class="num">1</div>
+      </div>
+      <div class="ml-4 text-base font-semibold">
+        <p>本番２週間前までに<br class="block md:hidden" />ご注文をいただく</p>
+      </div>
+    </div>
+    <div class="box-area">
+      <div class="step-area">
+        <div class="step">STEP</div>
+        <div class="num">2</div>
+      </div>
+      <div class="ml-4 text-base font-semibold">
+        <p>本番２週間前までにグリーティングメッセージを公式LINEで送っていただく</p>
+        <p class="text-sm font-normal">※間に合わない場合は、電話機への音源の入れ込みは出来ません。</p>
+        <p class="text-sm font-normal">※こちらからリマインドは致しませんのでご注意ください。</p>
+      </div>
+    </div>
+    <div class="box-area">
+      <div class="step-area">
+        <div class="step">STEP</div>
+        <div class="num">3</div>
+      </div>
+      <div class="ml-4 text-base font-semibold">
+        <p>本番２日前までに、ご指定の住所へお届け</p>
+        <p class="text-sm font-normal">※ 本品は精密機械です。万が一の場合に備え必ず受取後の動作確認をお願いします。</p>
+      </div>
+    </div>
+    <div class="box-area">
+      <div class="step-area">
+        <div class="step">STEP</div>
+        <div class="num">4</div>
+      </div>
+      <div class="ml-4 text-base font-semibold">
+        <p>当日は、電源をONにしてセットするだけ</p>
+      </div>
+    </div>
+    <div class="box-area">
+      <div class="step-area">
+        <div class="step">STEP</div>
+        <div class="num">5</div>
+      </div>
+      <div class="ml-4 text-base font-semibold">
+        <p>同封の伝票で本番翌日発送で返却</p>
+      </div>
+    </div>
+    <div class="box-area">
+      <div class="step-area">
+        <div class="step">STEP</div>
+        <div class="num">6</div>
+      </div>
+      <div class="ml-4 text-base font-semibold flex justify-center items-center flex-col md:flex-row">
+        <div>
+          <p class="mb-3">返却後、２つの方法でご納品</p>
+          <p class="text-sm font-normal">① 10日後にデータをUPしたURLをメールでご送付</p>
+          <p class="text-sm font-normal">② 1ヶ月後に小さいラジオに入れてご自宅へお届け</p>
+        </div>
+        <div class="ml-0 md:ml-2 my-4 md:my-0">
+          <Image
+            class="mx-auto"
+            src={PhoneSetImage}
+            width={232}
+            height={166}
+            alt="贈呈用ラジオセット"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .title {
+    @apply text-dark-gray font-futurapt
+          text-5xl border-b-4 border-purple
+          border-dotted pb-8 w-96 max-w-[90%] text-center;
+    font-weight: 450;
+  }
+  .table {
+    @apply flex justify-around flex-col shadow-2xl rounded-3xl w-[96%];
+    box-shadow: 0px 0px 16px 0px #00000040;
+  }
+  .box-area {
+    @apply flex justify-start items-start mx-auto w-[90%] py-6 border-b border-light-gray;
+  }
+  .step-area {
+    @apply flex justify-start items-end;
+    .step {
+      @apply text-base text-dark-purple pb-0.5 font-futurapt;
+      font-weight: 450;
+    }
+    .num {
+      @apply text-2xl text-dark-purple ml-0.5 font-futurapt;
+      font-weight: 450;
+    }
+  }
+</style>

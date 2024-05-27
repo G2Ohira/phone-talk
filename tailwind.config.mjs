@@ -16,16 +16,34 @@ export default {
 				'dark-gray': '#231815',
 				'purple': '#A887B4',
 				'light-black': '#221F24',
+				'dark-purple': '#62339C',
+				'gold': '#A78245',
+				'light-gray': '#D9D9D9',
 			},
 			fontFamily: {
 				sans: ['sans-serif'],
 				yugothic: ['yu-gothic-pr6n'],
 				futurapt: ['futura-pt'],
+				koburina: ['koburina'],
+				bodoni: ['Libre Bodoni'],
 			},
 			backgroundSize: {
-				'220%': '220%',
-				'300%': '300%',
-			}
+				'large': '220%',
+				'small': '230%',
+			},
+      keyframes: {
+        loopslide: {
+					from: {
+						transform: "translateX(0)"
+					},
+					to: {
+						transform: "translateX(-100%)"
+					}
+        }
+      },
+      animation: {
+        loopslide: 'loopslide 30s linear infinite',
+      }
 		},
 	},
 	plugins: [

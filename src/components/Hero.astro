@@ -1,38 +1,63 @@
 ---
 import { Image } from "astro:assets";
-import TextArchi from "../assets/text-archi.webp";
-import HeroBgLeft from "../assets/hero-bg-left.webp";
-import HeroBgRight from "../assets/hero-bg-right.webp";
+import TextArchiPc from "../assets/text-archi-pc.webp";
+import TextArchiSp from "../assets/text-archi-sp.webp";
 import HeroPic1 from "../assets/hero-pic-1.webp";
 ---
 
 <div class="flex justify-center relative">
-    <Image
-        class="mt-auto mr-0 md:mr-40 w-[30%] md:w-[295px] h-auto absolute 2xl:relative bottom-0 left-0 -z-10"
-        src={HeroBgLeft}
-        alt="PhoneTalk背景"
-    />
-    <div class="relative w-[470px] h-[640px] mx-4">
+    <div class="relative w-[470px] h-[640px] mx-4 hidden sm:block">
         <Image
-            class="max-w-[95%] absolute top-0 left-1/2 -translate-x-1/2"
-            src={TextArchi}
-            width={411}
-            height={123}
+            class="text-archi pc"
+            src={TextArchiPc}
+            width={587}
+            height={507}
             alt="Special memories will always be here"
         />
         <div
             style=`background-image: url(${HeroPic1.src})`
-            class="absolute bottom-0 left-1/2 -translate-x-1/2
-                w-[470px] h-[600px] bg-300% md:bg-220% bg-center bg-no-repeat
-                max-w-[95%] rounded-t-full border-orange border-8"
+            class="door-img pc"
         >
         </div>
     </div>
-    <Image
-        class="mb-auto ml-0 md:ml-40 w-[30%] md:w-[274px] h-auto absolute 2xl:relative top-0 right-0 -z-10"
-        src={HeroBgRight}
-        alt="PhoneTalk背景"
-    />
+    <div class="relative max-w-[450px] w-[100%] h-[425px] block sm:hidden">
+        <Image
+            class="text-archi sp"
+            src={TextArchiSp}
+            width={354}
+            height={395}
+            alt="Special memories will always be here"
+        />
+        <div
+            style=`background-image: url(${HeroPic1.src})`
+            class="door-img sp"
+        >
+        </div>
+    </div>
 </div>
 
-<style></style>
+<style>
+    .text-archi {
+        @apply absolute left-1/2 -translate-x-1/2;
+        &.pc {
+            @apply -top-4;
+            max-width: calc(100% + 100px);
+        }
+        &.sp {
+            @apply w-full -top-2;
+            max-width: calc(100% + 80px);
+        }
+    }
+    .door-img {
+        @apply absolute bottom-0 left-1/2 -translate-x-1/2
+                bg-center bg-no-repeat rounded-t-full
+                border-orange border-8;
+        &.pc {
+            @apply bg-large max-w-[90%] w-[470px] h-[600px];
+        }
+        &.sp {
+            @apply bg-small -bottom-2 max-w-[450px] w-[100%] h-[395px];
+            max-width: calc(100% - 80px);
+        }
+    }
+</style>

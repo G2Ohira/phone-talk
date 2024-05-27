@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import OptionItemsImage from "../assets/option-items.webp";
+---
+
+<div class="w-full max-w-4xl mx-auto mt-12 flex justify-between items-center flex-col lg:flex-row">
+  <div class="flex justify-center items-center flex-col">
+    <div class="title">Option Item</div>
+    <div class="text-center lg:text-left pl-0 lg:pl-2 mt-8 mb-4 w-[95%] tracking-wider">
+      <p class="my-4 pl-0 lg:pl-4 text-base lg:text-lg !leading-[36px]">
+        より会場で注目を集める<br />オプションアイテムはこちら
+      </p>
+    </div>
+  </div>
+  <div class="flex justify-around flex-col lg:flex-row mt-8 mb-4 w-[95%] lg:w-fit">
+    <Image
+      class="mx-auto"
+      src={OptionItemsImage}
+      width={308}
+      height={266}
+      alt="電話ボックス画像"
+    />
+  </div>
+</div>
+
+<style>
+  .title {
+    @apply text-dark-gray font-futurapt
+          text-5xl border-b-4 border-purple
+          border-dotted pb-8 w-96 lg:w-[600px] max-w-[90%]
+          text-center lg:text-left pl-0 lg:pl-2;
+    font-weight: 450;
+  }
+</style>

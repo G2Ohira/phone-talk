@@ -13,39 +13,13 @@ const { title } = Astro.props;
 		<meta name="description" content="PhoneTalk" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script>
-			(function (d) {
-				var config = {
-						kitId: "qwy2hnr",
-						scriptTimeout: 3000,
-						async: true,
-					},
-					h = d.documentElement,
-					t = setTimeout(function () {
-						h.className =
-							h.className.replace(/\bwf-loading\b/g, "") +
-							" wf-inactive";
-					}, config.scriptTimeout),
-					tk = d.createElement("script"),
-					f = false,
-					s = d.getElementsByTagName("script")[0],
-					a;
-				h.className += " wf-loading";
-				tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-				tk.async = true;
-				tk.onload = tk.onreadystatechange = function () {
-					a = this.readyState;
-					if (f || (a && a != "complete" && a != "loaded")) return;
-					f = true;
-					clearTimeout(t);
-					try {
-						Typekit.load(config);
-					} catch (e) {}
-				};
-				s.parentNode.insertBefore(tk, s);
-			})(document);
+			import '../scripts/typekit.js';
 		</script>
 	</head>
 	<body>
@@ -53,7 +27,28 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: 'koburina';
+		src: url('/fonts/KoburinaStdNW1.otf') format('otf');
+		font-weight: light;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'koburina';
+		src: url('/fonts/KoburinaStdNW3.otf') format('otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'koburina';
+		src: url('/fonts/KoburinaStdNW6.otf') format('otf');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
 	html {
-		@apply bg-light-white font-yugothic;
+		@apply bg-light-white font-koburina;
 	}
 </style>
