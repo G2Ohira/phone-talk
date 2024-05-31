@@ -1,11 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import PhoneSetImage from "../assets/phonetalk-set.webp";
+import PhoneSetImage from "../assets/phonetalk-set-items.webp";
+import FlowImage from "../assets/flow-image.webp";
 ---
 
-<div class="mt-12 flex justify-center items-center flex-col w-fit max-w-4xl mx-auto">
+<div class="mt-12 flex justify-center items-center flex-col w-full max-w-5xl mx-auto">
   <div class="title">Flow</div>
-  <div class="text-center lg:text-left pl-0 lg:pl-2 my-2 w-[96%] tracking-wider">
+  <div class="text-center pl-0 lg:pl-2 my-2 w-[96%] tracking-wider">
     <p class="pl-0 lg:pl-4 text-base lg:text-lg !leading-[36px] text-dark-purple font-bold">
       ご注文から納品まで
     </p>
@@ -64,7 +65,7 @@ import PhoneSetImage from "../assets/phonetalk-set.webp";
         <div class="step">STEP</div>
         <div class="num">6</div>
       </div>
-      <div class="ml-4 text-base font-semibold flex justify-center items-center flex-col md:flex-row">
+      <div class="w-full ml-4 text-base font-semibold flex justify-between items-start flex-col md:flex-row">
         <div>
           <p class="mb-3">返却後、２つの方法でご納品</p>
           <p class="text-sm font-normal">① 10日後にデータをUPしたURLをメールでご送付</p>
@@ -72,15 +73,22 @@ import PhoneSetImage from "../assets/phonetalk-set.webp";
         </div>
         <div class="ml-0 md:ml-2 my-4 md:my-0">
           <Image
-            class="mx-auto"
+            class="mx-auto w-[232px] h-auto aspect-ratio"
             src={PhoneSetImage}
-            width={232}
-            height={166}
+            width={928}
+            height={464}
             alt="贈呈用ラジオセット"
           />
         </div>
       </div>
     </div>
+    <Image
+      class="absolute -top-14 xl:top-auto bottom-auto xl:bottom-40 right-8 xl:-right-16 h-[150px] xl:h-[250px] w-auto"
+      src={FlowImage}
+      width={631}
+      height={1000}
+      alt="フローキャラ"
+    />
   </div>
 </div>
 
@@ -92,7 +100,7 @@ import PhoneSetImage from "../assets/phonetalk-set.webp";
     font-weight: 450;
   }
   .table {
-    @apply flex justify-around flex-col shadow-2xl rounded-3xl w-[96%];
+    @apply flex justify-around flex-col shadow-2xl rounded-3xl w-[96%] relative mt-12 xl:mt-0;
     box-shadow: 0px 0px 16px 0px #00000040;
   }
   .box-area {
