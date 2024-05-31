@@ -39,10 +39,19 @@ export default {
 					to: {
 						transform: "translateX(-100%)"
 					}
+        },
+        loopslide_reserve: {
+					from: {
+						transform: "translateX(-100%)"
+					},
+					to: {
+						transform: "translateX(0)"
+					}
         }
       },
       animation: {
-        loopslide: 'loopslide 30s linear infinite',
+        loopslide: 'loopslide 50s linear infinite',
+        loopslide_reserve: 'loopslide_reserve 50s linear infinite',
       }
 		},
 	},

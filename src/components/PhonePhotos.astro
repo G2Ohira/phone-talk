@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets";
+import PhonePhoto1 from "../assets/phone-photo-01.webp";
+import PhonePhoto2 from "../assets/phone-photo-02.webp";
+import PhonePhoto3 from "../assets/phone-photo-03.webp";
+import PhonePhoto4 from "../assets/phone-photo-04.webp";
+import PhonePhoto5 from "../assets/phone-photo-05.webp";
+import PhonePhoto6 from "../assets/phone-photo-06.webp";
+import PhonePhoto7 from "../assets/phone-photo-07.webp";
+import PhonePhoto8 from "../assets/phone-photo-08.webp";
+import PhonePhoto9 from "../assets/phone-photo-09.webp";
+import DotBig from "../assets/dot_big.webp";
+import DotSmall from "../assets/dot_small.webp";
+
+const photoImages = [PhonePhoto1,PhonePhoto2,PhonePhoto3,PhonePhoto4,PhonePhoto5,PhonePhoto6,PhonePhoto7,PhonePhoto8,PhonePhoto9];
+---
+<div class="my-6">
+  <div class="flex justify-around items-start overflow-hidden">
+    <div class="big-dot animate-loopslide_reserve">
+      <Image src={DotBig} alt="利用シーン" class="w-[1440px] h-[6px]" />
+    </div>
+    <div class="big-dot animate-loopslide_reserve">
+      <Image src={DotBig} alt="利用シーン" class="w-[1440px] h-[6px]" />
+    </div>
+  </div>
+  <div class="flex justify-around items-start overflow-hidden`">
+    <div class="small-dot animate-loopslide_reserve">
+      <Image src={DotSmall} alt="利用シーン" class="w-[1440px] h-[5px]" />
+    </div>
+    <div class="small-dot  animate-loopslide_reserve">
+      <Image src={DotSmall} alt="利用シーン" class="w-[1440px] h-[5px]" />
+    </div>
+  </div>
+  <div class="flex justify-start items-center overflow-hidden my-4">
+    <div class="photo-images">
+      {
+        photoImages.map((photoImage) => <Image src={photoImage} alt="利用シーン" class="w-[265x] h-[265px]" />)
+      }
+    </div>
+    <div class="photo-images">
+      {
+        photoImages.map((photoImage) => <Image src={photoImage} alt="利用シーン" class="w-[265x] h-[265px]" />)
+      }
+    </div>
+  </div>
+  <div class="flex justify-around items-start overflow-hidden">
+    <div class="small-dot animate-loopslide_reserve">
+      <Image src={DotSmall} alt="利用シーン" class="w-[1440px] h-[5px]" />
+    </div>
+    <div class="small-dot animate-loopslide_reserve">
+      <Image src={DotSmall} alt="利用シーン" class="w-[1440px] h-[5px]" />
+    </div>
+  </div>
+  <div class="flex justify-around items-start overflow-hidden">
+    <div class="big-dot animate-loopslide_reserve">
+      <Image src={DotBig} alt="利用シーン" class="w-[1440px] h-[6px]" />
+    </div>
+    <div class="big-dot animate-loopslide_reserve">
+      <Image src={DotBig} alt="利用シーン" class="w-[1440px] h-[6px]" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .small-dot {
+    @apply h-fit min-w-[1440px];
+  }
+  .big-dot {
+    @apply h-fit min-w-[1440px] my-1;
+  }
+  .photo-images {
+    @apply flex justify-around items-center space-x-4 mx-2 animate-loopslide;
+    min-width: calc((265px + 16px) * 9);
+  }
+</style>
