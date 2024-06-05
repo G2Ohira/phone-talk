@@ -27,28 +27,31 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	@font-face {
-		font-family: 'koburina';
-		src: url('/fonts/KoburinaStdNW1.otf') format('otf');
-		font-weight: light;
-		font-style: normal;
-		font-display: swap;
+  @font-face {
+    font-family: 'Koburina';
+    src: url("/fonts/KoburinaStdNW1.otf") format('otf');
+    font-weight: light;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Koburina';
+    src: url("/fonts/KoburinaStdNW3.otf") format('otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Koburina';
+    src: url("/fonts/KoburinaStdNW6.otf") format('otf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+	* {
+		font-family: 'Koburina', sans-serif;
 	}
-	@font-face {
-		font-family: 'koburina';
-		src: url('/fonts/KoburinaStdNW3.otf') format('otf');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'koburina';
-		src: url('/fonts/KoburinaStdNW6.otf') format('otf');
-		font-weight: bold;
-		font-style: normal;
-		font-display: swap;
-	}
-	html {
-		@apply bg-light-white font-koburina;
+	body {
+		@apply bg-light-white;
 	}
 </style>

@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: [
@@ -21,11 +23,11 @@ export default {
 				'light-gray': '#D9D9D9',
 			},
 			fontFamily: {
-				sans: ['sans-serif'],
-				yugothic: ['yu-gothic-pr6n'],
-				futurapt: ['futura-pt'],
-				koburina: ['koburina'],
-				bodoni: ['Libre Bodoni'],
+				sans: ['sans-serif', ...defaultTheme.fontFamily.sans],
+				yugothic: ['yu-gothic-pr6n', ...defaultTheme.fontFamily.sans],
+				futurapt: ['futura-pt', ...defaultTheme.fontFamily.sans],
+				koburina: ['Koburina', ...defaultTheme.fontFamily.sans],
+				bodoni: ['Libre Bodoni', ...defaultTheme.fontFamily.sans],
 			},
 			backgroundSize: {
 				'large': '220%',
