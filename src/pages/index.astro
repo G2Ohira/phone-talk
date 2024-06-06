@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import LineQr from "../assets/line-qr.webp";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
@@ -14,6 +12,8 @@ import SpecialMemories from "../components/SpecialMemories.astro";
 import Flow from "../components/Flow.astro";
 import PhonePhotos from "../components/PhonePhotos.astro";
 import Faq from "../components/Faq.astro";
+import Footer from "../components/Footer.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="Phone Talk">
@@ -29,17 +29,8 @@ import Faq from "../components/Faq.astro";
 	<Flow />
 	<PhonePhotos />
 	<Faq />
-	<div
-		class="flex my-4 justify-center items-center flex-col font-bold text-xl"
-	>
-		<a
-			class="flex my-4 justify-center items-center flex-col w-full"
-			href="https://lin.ee/NniC5wJ"
-		>
-			<div>問い合わせはこちら</div>
-			<Image class="w-48 h-48" src={LineQr} alt="問い合わせ先" />
-		</a>
-	</div>
+	<Footer />
+	<Contact />
 </Layout>
 
 <style></style>

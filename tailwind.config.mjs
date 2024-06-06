@@ -13,7 +13,7 @@ export default {
 				current: 'currentColor',
 				'white': '#ffffff',
 				'light-white': '#FBFBF9',
-				'black': '#000000',
+				'black': '#231815',
 				'orange': '#E35228',
 				'dark-gray': '#231815',
 				'purple': '#A887B4',
@@ -21,6 +21,7 @@ export default {
 				'dark-purple': '#62339C',
 				'gold': '#A78245',
 				'light-gray': '#D9D9D9',
+				'gold': '#B48340',
 			},
 			fontFamily: {
 				sans: ['sans-serif', ...defaultTheme.fontFamily.sans],

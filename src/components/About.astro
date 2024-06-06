@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import AboutImage from "../assets/about.webp";
 ---
 
-<div class="hidden md:flex justify-around items-start flex-row w-full max-w-6xl mx-auto">
+<div id="about" class="hidden md:flex justify-around items-start flex-row w-full max-w-6xl mx-auto mt-20">
   <div>
     <h2 class="title">Voice Album Service</h2>
     <h3 class="text-dark-purple font-futurapt font-semibold text-xl">その音声が宝物になる。未来に残る伝言サービス</h3>
@@ -43,7 +43,7 @@ import AboutImage from "../assets/about.webp";
 <div class="flex md:hidden justify-around items-start flex-col w-fit max-w-4xl mx-auto">
   <div class="text-center">
     <h2 class="title">Voice Album Service</h2>
-    <h3 class="text-dark-purple font-futurapt font-semibold text-lg my-2">その音声が宝物になる。未来に残る伝言サービス</h3>
+    <h3 class="text-dark-purple font-futurapt font-semibold text-base sm:text-lg my-2">その音声が宝物になる。未来に残る伝言サービス</h3>
   </div>
   <div class="my-5 mx-auto">
     <Image
@@ -54,8 +54,8 @@ import AboutImage from "../assets/about.webp";
         alt="Phone-Talkイメージ"
     />
   </div>
-  <div class="w-96 mx-auto">
-    <div class="my-4 leading-loose tracking-wider">
+  <div class="max-w-96 w-full mx-auto">
+    <div class="m-4 leading-loose tracking-wider">
       <p class="mb-4">
         Phone Talkは、2024年4月に設立された<br/>
         日本初のボイスアルバムサービスです。

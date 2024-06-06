@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+import LogoWide from "../assets/logo-wide.webp";
+---
+
+<div class="flex justify-center items-center flex-col w-full mx-auto">
+  <Image class="w-[292px] h-auto" src={LogoWide} alt="PhoneTalk Logo" />
+  <div class="my-12 mx-auto flex justify-center items-center space-x-8 font-futurapt text-xl">
+    <a href="#about">About</a>
+    <a href="#phone-type">Our Phones</a>
+    <a href="#flow">Flow</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div class="mt-6 bg-black text-white font-futurapt text-sm w-full h-48">
+    <div class="mx-auto mt-12 w-fit">©2024 Phone Talk</div>
+  </div>
+</div>
+
+<style>
+</style>

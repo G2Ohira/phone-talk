@@ -1,0 +1,221 @@
+---
+import { Image } from "astro:assets";
+import IconArrowUp from "../assets/icon_arrow-up.svg";
+import IconArrowDown from "../assets/icon_arrow-down.svg";
+---
+
+
+<div id="faq" class="mt-28 mb-12 flex justify-center items-center flex-col w-full mx-auto">
+  <div class="title">FAQ</div>
+  <div class="flex justify-around items-start flex-col lg:flex-row max-w-6xl w-full my-16 mx-auto">
+    <div class="q_and_a_separater">
+      <div class="q_and_a_wrapper">
+        <div class="q_wrapper">
+          <div class="q_text_area">
+            <div class="q_icon">Q</div>
+            <div class="q_text"><p>Wi-Fiや電話回線は必要ですか？</p></div>
+          </div>
+          <div class="a_opener">
+            <Image src={IconArrowUp} class="hidden w-4 h-4" alt="open" />
+            <Image src={IconArrowDown} class="block w-4 h-4" alt="close" />
+          </div>
+        </div>
+        <div class="a_wrapper active">
+          <div class="a_icon">A</div>
+          <div class="a_text"><p>いいえ、何も必要ありません。</p></div>
+        </div>
+      </div>
+      <div class="q_and_a_wrapper">
+        <div class="q_wrapper">
+          <div class="q_text_area">
+            <div class="q_icon">Q</div>
+            <div class="q_text">電池式ですか？</div>
+          </div>
+          <div class="a_opener">
+            <Image src={IconArrowUp} class="block w-4 h-4" alt="open" />
+            <Image src={IconArrowDown} class="hidden w-4 h-4" alt="close" />
+          </div>
+        </div>
+        <div class="a_wrapper">
+          <div class="a_icon">A</div>
+          <div class="a_text">
+            <p>充電式になりますので満タンでお届けいたしますが、気になる方は前日に付属の充電コードで充電をお願いいたします。</p>
+            <p>また、充電コードを挿しているとを録音が出来ません。使用時は必ず抜いて頂くようお願いします。</p>
+          </div>
+        </div>
+      </div>
+      <div class="q_and_a_wrapper">
+        <div class="q_wrapper">
+          <div class="q_text_area">
+            <div class="q_icon">Q</div>
+            <div class="q_text">
+              <p>事前に送るグリーティングメッセージとは何ですか？</p>
+              <p>また、何を言えば良いですか？</p>
+            </div>
+          </div>
+          <div class="a_opener">
+            <Image src={IconArrowUp} class="block w-4 h-4" alt="open" />
+            <Image src={IconArrowDown} class="hidden w-4 h-4" alt="close" />
+          </div>
+        </div>
+        <div class="a_wrapper">
+          <div class="a_icon">A</div>
+          <div class="a_text">
+            <p>グリーティングメッセージは、参加者が受話器を上げた時に聞こえるメッセージです。ご自由に設定できますが、当日の使用の回転数を考えると20秒以内がおススメです。内容はイベントによって異なってきます。</p>
+            <br />
+            <p class="font-bold">使い方は無限大！</p>
+            <br />
+            <p>【例：結婚式の場合】（新郎）です。（新婦）です。今日は私たちの結婚式に来てくれてありがとう。良かったら私たちへのメッセージをお願いします！</p>
+            <br />
+            <p>【例：卒業祝い】こんにちは〇〇です。今日は卒業おめでとう！各自の10年後の自分へのメッセージをお願いします。</p>
+            <br />
+            <p>例：ベビーシャワー】〇〇です。今日は来てくれてありがとう。来月産まれてくる〇〇へ良かったら一言メッセージをお願いします！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="q_and_a_separater">
+      <div class="q_and_a_wrapper">
+        <div class="q_wrapper">
+          <div class="q_text_area">
+            <div class="q_icon">Q</div>
+            <div class="q_text"><p>電話の色の指定は出来ますか？</p></div>
+          </div>
+          <div class="a_opener">
+            <Image src={IconArrowUp} class="block w-4 h-4" alt="open" />
+            <Image src={IconArrowDown} class="hidden w-4 h-4" alt="close" />
+          </div>
+        </div>
+        <div class="a_wrapper">
+          <div class="a_icon">A</div>
+          <div class="a_text">
+            <p>ご希望カラーはお伺いいたしますが、在庫の関係でご希望に添えない場合もございます。</p>
+            <p>確実に希望カラーを抑えたい場合は、３か月以上前の注文をおススメ致します。</p>
+          </div>
+        </div>
+      </div>
+      <div class="q_and_a_wrapper">
+        <div class="q_wrapper">
+          <div class="q_text_area">
+            <div class="q_icon">Q</div>
+            <div class="q_text"><p>電話機は会場のどこに設置するのがおススメですか？</p></div>
+          </div>
+          <div class="a_opener">
+            <Image src={IconArrowUp} class="block w-4 h-4" alt="open" />
+            <Image src={IconArrowDown} class="hidden w-4 h-4" alt="close" />
+          </div>
+        </div>
+        <div class="a_wrapper">
+          <div class="a_icon">A</div>
+          <div class="a_text">
+            <p>使用用途によりますが、参加者が必ず通る導線上に設置するのがおススメです。</p>
+            <p>ただし、イベントによりスタート前よりも中盤～後半の方が、参加者もほぐれて<span class="mx-1 text-orange">“より本音で話す”</span>傾向が強いです。</p>
+            <p>イベントの司会文言も、セットに同封いたしますので是非ご活用下さい。</p>
+            <p>よりプライベートな本音を集めたい場合は、 OPTIONで電話ボックスなどもご用意もございます。</p>
+          </div>
+        </div>
+      </div>
+      <div class="q_and_a_wrapper">
+        <div class="q_wrapper">
+          <div class="q_text_area">
+            <div class="q_icon">Q</div>
+            <div class="q_text"><p>どのような納品形態ですか？</p></div>
+          </div>
+          <div class="a_opener">
+            <Image src={IconArrowUp} class="block w-4 h-4" alt="open" />
+            <Image src={IconArrowDown} class="hidden w-4 h-4" alt="close" />
+          </div>
+        </div>
+        <div class="a_wrapper">
+          <div class="a_icon">A</div>
+          <div class="a_text">
+            <p>電話をご返却頂いた後、２つの方法でご納品します。（①②どちらもご納品）</p>
+            <p class="ml-4">①１週間以内にデータをUPしたURLをメールでご送付</p>
+            <p class="ml-4">②２０日以内に小さいラジオに入れてご自宅へお届け</p>
+          </div>
+        </div>
+      </div>
+      <div class="q_and_a_wrapper">
+        <div class="q_wrapper">
+          <div class="q_text_area">
+            <div class="q_icon">Q</div>
+            <div class="q_text"><p>長期でレンタルしたいのですが、可能ですか？</p></div>
+          </div>
+          <div class="a_opener">
+            <Image src={IconArrowUp} class="block w-4 h-4" alt="open" />
+            <Image src={IconArrowDown} class="hidden w-4 h-4" alt="close" />
+          </div>
+        </div>
+        <div class="a_wrapper">
+          <div class="a_icon">A</div>
+          <div class="a_text">
+            <p>仕様用途により、ご相談可能です。コンタクトフォームよりお問合せください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .title {
+    @apply text-dark-gray font-futurapt
+          text-5xl border-b-4 border-purple
+          border-dotted pb-8 w-full max-w-[90%] text-center;
+    font-weight: 450;
+  }
+  .q_and_a_separater {
+    @apply flex justify-start items-start flex-col mx-auto xl:mx-4;
+  }
+  .q_and_a_wrapper {
+    @apply flex justify-start items-start flex-col max-w-[512px] w-full;
+  }
+  .q_wrapper {
+    @apply flex justify-between items-start w-[95%] lg:w-full p-3 cursor-pointer;
+  }
+  .q_text_area {
+    @apply flex justify-start items-baseline;
+  }
+  .q_icon {
+    @apply font-medium text-xl text-orange font-futurapt mr-3;
+  }
+  .q-text {
+    @apply font-bold font-futurapt;
+  }
+  .a_wrapper {
+    @apply relative justify-start items-start p-2 pl-4 rounded-2xl bg-light-white w-11/12 lg:w-[96%] m-3 hidden;
+  }
+  .a_wrapper.active {
+    @apply flex;
+  }
+  .a_wrapper::before {
+    @apply absolute content-[""] border -top-5 left-6;
+    border-width: 10px;
+    border-color:  transparent transparent #FBFBF9 transparent;
+  }
+  .a_icon {
+    @apply font-medium text-xl text-black font-futurapt mr-3;
+  }
+  .a-text {
+    @apply font-bold font-futurapt;
+  }
+  .a_opener {
+    @apply pt-2;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (_event) => {
+    const qWrapperList = document.getElementsByClassName('q_wrapper');
+    for (let qWrapper of qWrapperList) {
+      qWrapper.addEventListener('click', function() {
+        for (let child of this.querySelector(".a_opener").children) {
+          child.classList.toggle('hidden');
+          child.classList.toggle('block');
+        }
+        const aWrapper = this.closest(".q_and_a_wrapper").querySelector(".a_wrapper");
+        aWrapper.classList.toggle('active');
+      });
+    }
+  });
+</script>
