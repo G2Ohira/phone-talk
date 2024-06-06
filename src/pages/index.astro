@@ -17,6 +17,7 @@ import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="Phone Talk">
+	<div id="phonetalk-bg"></div>
 	<Header />
 	<Hero />
 	<Obi />
@@ -33,4 +34,32 @@ import Contact from "../components/Contact.astro";
 	<Contact />
 </Layout>
 
-<style></style>
+<style>
+	#phonetalk-bg {
+		@apply fixed bottom-0 left-1/2 -translate-x-1/2
+				bg-bg-gray -z-10 rounded-t-[200px] sm:rounded-t-full
+				max-w-[96%] sm:max-w-[99%] min-w-[calc(100%-90px)] sm:min-w-[800px]
+				h-[calc(100%-180px)] sm:h-[calc(100%-60px)];
+	}
+</style>
+
+<script>
+	let currentBgWidth = 0;
+	let currentBgHeight = 0;
+  document.addEventListener("DOMContentLoaded", (_event) => {
+		const phonetalkBg = document.getElementById('phonetalk-bg');
+		currentBgWidth = phonetalkBg.clientWidth;
+		currentBgHeight = phonetalkBg.clientHeight;
+	});
+  document.addEventListener("resize", (_event) => {
+		const phonetalkBg = document.getElementById('phonetalk-bg');
+		currentBgWidth = phonetalkBg.clientWidth;
+		currentBgHeight = phonetalkBg.clientHeight;
+	});
+  document.addEventListener("scroll", (_event) => {
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		const phonetalkBg = document.getElementById('phonetalk-bg');
+		phonetalkBg.style.width = `${currentBgWidth + (scrollTop / 2)}px`;
+		phonetalkBg.style.height = `${currentBgHeight + (scrollTop / 3)}px`;
+	});
+</script>

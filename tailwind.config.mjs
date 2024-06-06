@@ -22,6 +22,7 @@ export default {
 				'gold': '#A78245',
 				'light-gray': '#D9D9D9',
 				'gold': '#B48340',
+				'bg-gray': '#E9E8E4',
 			},
 			fontFamily: {
 				sans: ['sans-serif', ...defaultTheme.fontFamily.sans],
