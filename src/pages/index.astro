@@ -59,7 +59,7 @@ import Contact from "../components/Contact.astro";
   document.addEventListener("scroll", (_event) => {
 		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 		const phonetalkBg = document.getElementById('phonetalk-bg');
-		phonetalkBg.style.width = `${currentBgWidth + (scrollTop / 2)}px`;
-		phonetalkBg.style.height = `${currentBgHeight + (scrollTop / 3)}px`;
+		phonetalkBg.style.width = `${currentBgWidth + (scrollTop / 5)}px`;
+		phonetalkBg.style.height = `${currentBgHeight + (scrollTop / 9)}px`;
 	});
 </script>

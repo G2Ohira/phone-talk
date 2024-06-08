@@ -5,7 +5,7 @@ import logo from "../assets/logo-slim.webp";
 
 <div class="border-orange border-t-4">
     <div
-        class="flex justify-between items-center p-9 container mx-auto max-w-7xl"
+        class="flex justify-between items-start p-9 container mx-auto max-w-7xl"
     >
         <div>
             <Image
@@ -14,20 +14,28 @@ import logo from "../assets/logo-slim.webp";
                 alt="PhoneTalkロゴ"
             />
         </div>
-        <!-- <div class="hidden md:flex justify-around items-center">
-            <a href="#">About</a>
-            <a href="#">Our Phones</a>
-            <a href="#">Flow</a>
-            <a href="#">FAQ</a>
-            <a href="#">Voice</a>
+        <div class="hidden md:flex justify-around items-center">
+            <a href="#about">About</a>
+            <a href="#phone-type">Our Phones</a>
+            <a href="#flow">Flow</a>
+            <a href="#faq">FAQ</a>
+            <!-- <a href="#voice">Voice</a> -->
         </div>
         <div
-            class="flex md:hidden justify-between items-center flex-col h-4 cursor-pointer"
+            id="sp-menu"
+            class="relative flex md:hidden justify-between items-end flex-col h-4 cursor-pointer bg-white"
         >
             <div class="menu"></div>
             <div class="menu"></div>
-            <div class="menu"></div>
-        </div> -->
+            <div id="sp-menu-select" class="hidden absolute top-10 rounded-3xl bg-black w-52 flex justify-center items-center flex-col py-2 px-4 z-40">
+                <a href="#about">About</a>
+                <a href="#phone-type">Our Phones</a>
+                <a href="#flow">Flow</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+        <div id="overlay" class="hidden z-30 fixed top-0 left-0 w-screen h-screen bg-opacity-0">
+        </div>
     </div>
 </div>
 
@@ -37,6 +45,54 @@ import logo from "../assets/logo-slim.webp";
         font-weight: 450;
     }
     .menu {
-        @apply border-t border-t-light-black w-8;
+        @apply border-t-2 border-t-light-black w-8;
+    }
+    .menu:first-child {
+        @apply w-12;
+    }
+    #sp-menu.close .menu:first-child {
+        @apply rotate-45 translate-y-2;
+    }
+    #sp-menu.close .menu {
+        @apply !w-12 -rotate-45 -translate-y-2;
+    }
+    #sp-menu .menu {
+        @apply ease-linear duration-300;
+    }
+    #sp-menu-select a {
+        @apply text-white font-futurapt p-4 w-full text-center mx-auto;
+    }
+    #sp-menu-select a:not(:last-child) {
+        @apply border-b border-purple;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const overlay = document.getElementById('overlay');
+        const spMenu = document.getElementById('sp-menu');
+        const spMenuSelect = document.getElementById('sp-menu-select');
+        spMenu.addEventListener('click', (_event) => {
+            spMenu.addEventListener('click', () => {
+                spMenu.classList.toggle('close');
+                overlay.classList.toggle('hidden');
+                spMenuSelect.classList.toggle('hidden');
+            });
+        });
+        const close = () => {
+            if (spMenu.classList.contains('close')) {
+                spMenu.classList.remove('close')
+            }
+            if (!overlay.classList.contains('hidden')) {
+                overlay.classList.add('hidden')
+            }
+            if (!spMenuSelect.classList.contains('hidden')) {
+                spMenuSelect.classList.add('hidden');
+            }
+        }
+        overlay.addEventListener('click', close);
+        for (let child of spMenuSelect.children) {
+            child.addEventListener('click', close);
+        }
+    });
+</script>
